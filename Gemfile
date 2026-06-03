@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 
-gem 'irb', '1.17.0'
+gem 'bigdecimal', '4.1.1'
