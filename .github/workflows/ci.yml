@@ -43,7 +43,7 @@ jobs:
         git diff
         git checkout .
 
-    - name: Show gems to be updated with --cooldown750
+    - name: Show gems to be updated with --cooldown=7
       run: |
         bundle update --all --cooldown=7
         git diff
