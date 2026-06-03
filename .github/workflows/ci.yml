@@ -31,7 +31,20 @@ jobs:
     - name: Show outdated gems
       run: bundle outdated || true
 
-    - name: Update gems without committing
+    - name: Show gems to be updated with default cooldown
       run: |
         bundle update --all
         git diff
+        git checkout .
+
+    - name: Show gems to be updated with --cooldown=50
+      run: |
+        bundle update --all --cooldown=50
+        git diff
+        git checkout .
+
+    - name: Show gems to be updated with --cooldown750
+      run: |
+        bundle update --all --cooldown=7
+        git diff
+        git checkout .
